@@ -1,0 +1,78 @@
+
+Database (MySQL):......
+Now, the **Doctor's table** will include additional fields for **days to visit** and **time** to represent the doctor's availability. Here's the updated structure:
+
+### **Doctor's Table**:
+- `doctor_id`: Unique identifier for each doctor.
+- `doctor_name`: Full name of the doctor.
+- `fees`: Consultation fee charged by the doctor.
+- `location`: Clinic or hospital location.
+- `specialist`: The doctor's specialization.
+- `days_to_visit`: Days when the doctor is available (e.g., Monday, Wednesday, Friday).
+- `time`: Time slots during which the doctor can be visited (e.g., 9 AM - 12 PM, 3 PM - 6 PM).
+
+This will help patients select doctors based on their availability, days, and time slots for appointments.
+
+Symptom Table:
+symptom_id: Unique identifier for each symptom.
+symptom_name: The name of the symptom (e.g., Chest Pain, Toothache).
+Relationships:
+A many-to-many relationship with the Doctor's table because each symptom can have multiple doctors associated with it.
+A doctor_id that connects the symptom to relevant doctors based on their specialties.
+
+User's Table:
+user_id: Unique identifier for each user.
+name: Full name of the patient.
+phone: Phone number of the user.
+email: Email address of the user.
+password (optional): If you plan to implement user login.
+
+The **Appointments Table** will store information about booked appointments and serve as the core link between users, doctors, and available time slots. Here's how you can structure it:
+
+### **Appointments Table**:
+- `appointment_id`: Unique identifier for each appointment.
+- `user_id`: Foreign key linking to the **User's table** (the patient who booked the appointment).
+- `doctor_id`: Foreign key linking to the **Doctor's table** (the doctor with whom the appointment is booked).
+- `symptom_id`: Foreign key linking to the **Symptom's table** (the symptom related to the appointment).
+- `appointment_date`: The date of the appointment.
+- `appointment_time`: The time slot booked for the appointment.
+- `status`: The current status of the appointment (e.g., Pending, Confirmed, Canceled).
+- `created_at`: Timestamp when the appointment was made.
+
+### Relationships:
+- **User's Table** → One user can book multiple appointments.
+- **Doctor's Table** → Each doctor can have multiple appointments.
+- **Symptom's Table** → Appointments can be linked to specific symptoms, enabling a diagnosis-specific booking process.
+
+This structure will help manage appointment bookings efficiently, allowing users to view, modify, or cancel their appointments.
+
+...............................................................................................................
+PHP....
+1. registration
+2. login
+3. Database connection
+4. Validation & Error Handling
+
+...............................................................................................................
+FRONT PAGE...
+1. Login Page (login.html)
+A simple login form where users can log in using their email and password.
+Fields:
+
+Email input field
+Password input field
+Login button
+Link to registration page
+
+2. Registration Page (register.html)
+A registration form for users to create an account.
+
+3. Booking Page (book_appointment.html)
+A form where users can select a doctor, see doctor details (fees, specialization), and book an appointment.
+Components:
+Navigation bar:---
+1.home*
+2.find doctor*
+3.your profile -> User Dashboard Page (user_dashboard.html)
+4.login/registration
+

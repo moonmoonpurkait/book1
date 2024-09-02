@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Doctor Appointment Booking</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/admin_login.css">
+</head> 
+<body> 
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html" aria-label="Homepage">
+                    <img src="images/logo.jpg" alt="Doctor Appointment Booking Logo">
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html" aria-label="Home">Home</a></li>
+                <li><a href="login.html" aria-label="Login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form class="login-form" id="loginForm">
+            <h1>Admin Login</h1>
+            <div class="form-input-material">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter Username" class="form-control-material" required>
+            </div>
+            <div class="form-input-material">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter Password" class="form-control-material" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-ghost">Login</button>
+            <p id="errorMessage" style="color: red; display: none;">Invalid username or password</p>
+        </form>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Doctor Appointment Booking System. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting
+
+            // Get username and password input values
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Check if credentials match
+            if (username === 'admin' && password === 'password') {
+                window.location.href = 'admin/admin_dashboard.html'; // Redirect to admin dashboard
+            } else {
+                document.getElementById('errorMessage').style.display = 'block'; // Show error message
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 96%;
+}
+/* Center the form on the page */
+#addDoctorForm {
+    font-size: 25px;;
+    align-items: normal;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+.btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-items: flex-end;
+}
+.btn:hover {
+    background-color: #0056b3;
+}

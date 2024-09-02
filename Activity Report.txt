@@ -1,0 +1,29 @@
+Activity Report: Slot Booking for Doctor’s Appointment Project
+
+1. Frontend Development:
+Home Page Creation:
+Successfully created the Home Page using HTML. The home page serves as the main entry point for users, 
+providing information about the booking system and links to login and register.
+
+Login Page Creation:
+Developed the Login Page in HTML. This page allows users to log in using their email and password. 
+It includes input fields for credentials and a link to the registration page for new users.
+
+Registration Page Creation:
+Designed and built the Registration Page using HTML. Users can input their name, email, phone number, 
+and password to create a new account. The page has been structured to ensure a smooth user registration process.
+
+2. Database Setup and Research:
+Database Research:
+Researched and gathered all necessary details about the database, ensuring a solid understanding of the data structure needed for the project.
+Database Tables Creation:
+Created the required tables in MySQL:
+Doctors Table: Includes fields such as doctor name, specialization, fees, location, available days, and time slots.
+Users Table: Stores user details like name, phone number, email, and password.
+Symptoms Table: Contains various symptoms that users can select from when booking an appointment.
+Appointments Table: Tracks all user appointments with relevant details such as doctor, user, date, time, and status.
+
+3. Documentation:
+Project Documentation:
+Completed comprehensive project documentation outlining the system's design, database structure, and how the front-end 
+components interact with the backend. The documentation serves as a blueprint for the entire project and ensures easy maintenance and scalability in the future.

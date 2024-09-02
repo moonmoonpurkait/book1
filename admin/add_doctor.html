@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Doctor - Admin Dashboard</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/add_doctor.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html" aria-label="Homepage">
+                    <img src="images/logo.jpg" alt="Doctor Appointment Booking Logo">
+                </a>
+            </div>
+            <ul>
+                <li><a href="admin_dashboard.html" aria-label="Home">Home</a></li>
+                <li><a href="add_doctor.html" aria-label="Add New Doctor">Add New Doctor</a></li>
+                <li><a href="remove doctor.html" aria-label="Remove a Doctor">Remove a Doctor</a></li>
+                <li><a href="edit_details.html" aria-label="Edit Doctor Data">Edit Doctor Data</a></li>      
+                <li><a href="../index.html" aria-label="Logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Admin Dashboard</h1>
+        <p>Welcome, Admin! Use the form below to add a new doctor's information.</p>
+
+        <!-- Form to Add a Doctor -->
+        <form id="addDoctorForm" action="#" method="post">
+            <div class="form-group">
+                <label for="doctorName">Doctor Name:</label>
+                <input type="text" id="doctorName" name="doctorName" placeholder="Enter Doctor's Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hospital">Hospital Working:</label>
+                <input type="text" id="hospital" name="hospital" placeholder="Enter Hospital Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="experience">Experience (Years):</label>
+                <input type="number" id="experience" name="experience" placeholder="Enter Years of Experience" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="specialization">Diagnosis Specialization:</label>
+                <input type="text" id="specialization" name="specialization" placeholder="Enter Specialization" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fees">Consultation Fees:</label>
+                <input type="number" id="fees" name="fees" placeholder="Enter Fees in USD" min="0" step="0.01" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Add Doctor</button>
+        </form>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Doctor Appointment Booking System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
